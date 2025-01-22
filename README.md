@@ -1,148 +1,70 @@
-# Project Setup Guide
+# Getting Started with Create React App
 
-This guide provides step-by-step instructions to set up and run the React (frontend) and Laravel (backend) applications using XAMPP.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
----
+## Available Scripts
 
-## Prerequisites
+In the project directory, you can run:
 
-Before proceeding, ensure you have the following installed:
+### `npm start`
 
-1. **XAMPP** (with PHP 8.1 or higher)  
-   [Download and install XAMPP](https://www.apachefriends.org/index.html)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-2. **Node.js** (v16 or higher)  
-   [Download and install Node.js](https://nodejs.org/)
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-3. **npm or yarn**  
-   `npm` comes with Node.js. To install `yarn`, run:
+### `npm test`
 
-   ```bash
-   npm install -g yarn
-   ```
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-4. **Composer** (latest version)  
-   [Download and install Composer](https://getcomposer.org/)
+### `npm run build`
 
----
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## 1. React Frontend Setup
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### Steps to Run the React App:
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-1. **Extract the ZIP File**  
-   Extract the React app's ZIP file into a directory of your choice.
+### `npm run eject`
 
-2. **Navigate to the Project Directory**
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-   ```bash
-   cd path/to/react-app
-   ```
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-3. **Install Dependencies**  
-   Run the following command to install the required packages:
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-   ```bash
-   npm install
-   ```
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-   _Or, if using `yarn`:_
+## Learn More
 
-   ```bash
-   yarn install
-   ```
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-4. **Start the Development Server**  
-   Run the following command:
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-   ```bash
-   npm start
-   ```
+### Code Splitting
 
-   _Or, if using `yarn`:_
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-   ```bash
-   yarn start
-   ```
+### Analyzing the Bundle Size
 
-5. **Access the Application**  
-   Open your web browser and navigate to:
-   ```
-   http://localhost:3000
-   ```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
----
+### Making a Progressive Web App
 
-## 2. Laravel Backend Setup (Using XAMPP)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Steps to Run the Laravel App:
+### Advanced Configuration
 
-1. **Extract the ZIP File**  
-   Extract the Laravel app's ZIP file into a directory under the XAMPP `htdocs` folder:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-   ```
-   C:/xampp/htdocs/project-management-api-laravel
-   ```
+### Deployment
 
-2. **Start XAMPP Services**  
-   Open the XAMPP Control Panel and start the **Apache** and **MySQL** services.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-3. **Create a Database**
+### `npm run build` fails to minify
 
-   - Open **phpMyAdmin** in your browser:
-     ```
-     http://localhost/phpmyadmin
-     ```
-   - Create a new database (e.g., `project_management`).
-
-4. **Navigate to the Laravel Project Directory**
-
-   ```bash
-   cd C:/xampp/htdocs/project-management-api-laravel
-   ```
-
-5. **Install Dependencies**  
-   Run the following command to install PHP packages:
-
-   ```bash
-   composer install
-   ```
-
-6. **Configure the Environment File**
-
-   - Create a copy of `.env.example` and rename it to `.env`:
-     ```bash
-     cp .env.example .env
-     ```
-   - Open `.env` and update the database configuration to match your XAMPP MySQL setup:
-     ```env
-     DB_CONNECTION=mysql
-     DB_HOST=127.0.0.1
-     DB_PORT=3306
-     DB_DATABASE=project_management
-     DB_USERNAME=root
-     DB_PASSWORD=
-     ```
-
-7. **Generate the Application Key**
-
-   ```bash
-   php artisan key:generate
-   ```
-
-8. **Run Database Migrations**  
-   Run the migrations to set up the database schema:
-
-   ```bash
-   php artisan migrate
-   ```
-
-9. **Start the Laravel Development Server**  
-   Use the following command:
-   ```bash
-   php artisan serve
-   ```
-   By default, this will start the server at:
-   ```
-   http://127.0.0.1:8000
-   ```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
